@@ -1,0 +1,20 @@
+<!-- File: services.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Services</title><link rel="stylesheet" href="styles.css" /></head>
+<body onload="loadServices()">
+  <h2>Our Services</h2>
+  <div id="services"></div>
+  <div id="bookingForm" style="display:none">
+    <h3>Book Service</h3>
+    <form onsubmit="bookService(event)">
+      <label>Choose Time:</label>
+      <input type="datetime-local" id="bookingTime" required />
+      <label>Choose Employee:</label>
+      <select id="employeeSelect"></select>
+      <button type="submit">Book Now</button>
+    </form>
+  </div>
+</body>
+<script src="app.js"></script>
+</html>

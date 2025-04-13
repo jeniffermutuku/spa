@@ -1,0 +1,4 @@
+/* File: styles.css */
+body { font-family: Arial; padding: 20px; }
+input, button, select { margin: 10px; padding: 8px; }
+header nav a { margin: 0 10px; text-decoration: none; }
