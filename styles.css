@@ -334,6 +334,10 @@ form {
     color: white;
     margin-bottom: 20px;
   }
+
+  .background-overlay main h2 {
+    text-align: center;
+  }
   
   /* Responsive for Mobile */
   @media (max-width: 768px) {
