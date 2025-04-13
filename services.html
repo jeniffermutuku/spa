@@ -1,20 +1,42 @@
-<!-- File: services.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Services</title><link rel="stylesheet" href="styles.css" /></head>
-<body onload="loadServices()">
-  <h2>Our Services</h2>
-  <div id="services"></div>
-  <div id="bookingForm" style="display:none">
-    <h3>Book Service</h3>
-    <form onsubmit="bookService(event)">
-      <label>Choose Time:</label>
-      <input type="datetime-local" id="bookingTime" required />
-      <label>Choose Employee:</label>
-      <select id="employeeSelect"></select>
+<head>
+  <meta charset="UTF-8">
+  <title>Spa Services</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="services.js"></script>
+</head>
+<body>
+  <h1>Welcome to Our Spa Services</h1>
+  
+  <div id="services-container"></div>
+
+  <div id="booking-section">
+    <h2>Book a Service</h2>
+    <form id="booking-form">
+      <label for="service">Choose Service:</label>
+      <select id="service" required></select><br>
+
+      <label for="employee">Choose Employee:</label>
+      <select id="employee" required></select><br>
+
+      <label for="start-time">Start Time:</label>
+      <input type="datetime-local" id="start-time" required><br>
+
+      <label for="duration">Duration (in hours):</label>
+      <select id="duration">
+        <option value="1">1 hour</option>
+        <option value="2">2 hours</option>
+      </select><br>
+
       <button type="submit">Book Now</button>
     </form>
   </div>
+
+  <div id="invoice" style="display:none;">
+    <h2>Booking Invoice</h2>
+    <p id="invoice-details"></p>
+    <button id="download-invoice">Download Invoice</button>
+  </div>
 </body>
-<script src="app.js"></script>
 </html>
