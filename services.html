@@ -2,41 +2,59 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Spa Services</title>
+  <title>Spa Services - Spa Wellness</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles.css">
-  <script defer src="services.js"></script>
 </head>
 <body>
-  <h1>Welcome to Our Spa Services</h1>
-  
-  <div id="services-container"></div>
+  <div class="background-overlay">
+    <header class="navbar">
+      <h1 class="logo">JOYLAND SPA</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </header>
 
-  <div id="booking-section">
-    <h2>Book a Service</h2>
-    <form id="booking-form">
-      <label for="service">Choose Service:</label>
-      <select id="service" required></select><br>
+    <main class="services-content">
+      <h2>Our Signature Spa Services</h2>
+      <p class="service-description">
+        Whether you're looking to unwind after a long week or pamper yourself with a complete rejuvenation ritual, 
+        our curated list of services is designed to meet your every need.
+      </p>
 
-      <label for="employee">Choose Employee:</label>
-      <select id="employee" required></select><br>
+      <div id="services-container" class="card-grid"></div>
 
-      <label for="start-time">Start Time:</label>
-      <input type="datetime-local" id="start-time" required><br>
+      <section id="booking-section" class="booking-form-section">
+        <h2>Book a Service</h2>
+        <form id="booking-form" class="glass-form">
+          <label for="service">Choose Service:</label>
+          <select id="service" required></select>
 
-      <label for="duration">Duration (in hours):</label>
-      <select id="duration">
-        <option value="1">1 hour</option>
-        <option value="2">2 hours</option>
-      </select><br>
+          <label for="employee">Choose Therapist:</label>
+          <select id="employee" required></select>
 
-      <button type="submit">Book Now</button>
-    </form>
+          <label for="start-time">Start Time:</label>
+          <input type="datetime-local" id="start-time" required>
+
+          <label for="duration">Duration (in hours):</label>
+          <select id="duration">
+            <option value="1">1 hour</option>
+            <option value="2">2 hours</option>
+          </select>
+          <button type="submit">Book Now</button>
+        </form>
+      </section>
+
+      <div id="invoice" class="glass-form" style="display:none;">
+        <h2>Booking Invoice</h2>
+        <p id="invoice-details"></p>
+        <button id="download-invoice">Download Invoice</button>
+      </div>
+    </main>
   </div>
-
-  <div id="invoice" style="display:none;">
-    <h2>Booking Invoice</h2>
-    <p id="invoice-details"></p>
-    <button id="download-invoice">Download Invoice</button>
-  </div>
+  <script src="app.js" defer></script>
 </body>
 </html>
