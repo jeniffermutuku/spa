@@ -82,7 +82,7 @@ function bookService(e) {
     if (!serviceResult) {
       alert('Service not found.');
       return;
-    };
+    }
 
     const serviceId = serviceResult.id;
 
@@ -106,7 +106,7 @@ function bookService(e) {
         if (existingBookings.some(booking => booking.employee_id === employeeId)) {
           alert('This employee is already booked at this time.');
           return;
-        };
+        }
 
         // Insert booking
         const newBooking = {
